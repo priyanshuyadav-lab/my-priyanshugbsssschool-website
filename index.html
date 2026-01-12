@@ -1,135 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBSSS NO2 Molarband</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") 
-            no-repeat center center/cover;
-            min-height: 100vh;
-            color: white;
-        }
+<meta charset="UTF-8">
+<title>GBSSS NO2 Molarband</title>
 
-        header {
-            background: rgba(0,0,0,0.65);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            backdrop-filter: blur(4px);
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-        .container {
-            display: flex;
-            padding: 20px;
-        }
+    body {
+        background: rgba(0,0,0,0.4) url('bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .sidebar {
-            width: 200px;
-            backdrop-filter: blur(6px);
-            background: rgba(0,0,0,0.6);
-            padding: 15px;
-            border-radius: 8px;
-        }
+    .top-bar {
+        width: 100%;
+        height: 70px;
+        background: rgba(255,255,255,0.7);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
 
-        .sidebar h3 {
-            margin-top: 0;
-            color: #ffdd66;
-        }
+    .school-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #001a70;
+        text-shadow: 1px 1px 2px white;
+    }
 
-        .class-btn {
-            width: 100%;
-            padding: 12px;
-            margin: 6px 0;
-            background: #2266ff;
-            border: none;
-            color: white;
-            font-size: 15px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .class-btn:hover {
-            background: #0046c7;
-        }
+    .logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #001a70;
+    }
 
-        .section-box {
-            padding: 20px;
-            margin-left: 20px;
-            background: rgba(0,0,0,0.55);
-            border-radius: 8px;
-            flex-grow: 1;
-        }
+    .btn-box {
+        margin-top: 120px;
+        text-align: center;
+    }
 
-        .login-btn {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            background: #ff0077;
-            border: none;
-            padding: 10px 20px;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .login-btn:hover {
-            background: #d50063;
-        }
+    .login-btn {
+        font-size: 22px;
+        padding: 12px 30px;
+        border-radius: 6px;
+        border: none;
+        background: royalblue;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        transition: 0.2s;
+    }
 
-        .sec-btn {
-            padding: 10px;
-            margin: 5px;
-            background: #00cc99;
-            border: none;
-            color: white;
-            font-size: 15px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .sec-btn:hover {
-            background: #009c73;
-        }
-    </style>
+    .login-btn:hover{
+        background: navy;
+        transform: scale(1.05);
+    }
+</style>
 
-    <script>
-        function showSections(className) {
-            document.getElementById("sectionBox").innerHTML = `
-                <h2>${className}</h2>
-                <button class='sec-btn'>Section A</button>
-                <button class='sec-btn'>Section B</button>
-                <button class='sec-btn'>Section C</button>
-                <button class='sec-btn'>Section D</button>
-            `;
-        }
-    </script>
 </head>
-
 <body>
 
-<header>GBSSS NO2 MOLARBAND — NEW DELHI 110044</header>
-<button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+<div class="top-bar">
+    <div class="school-name">GBSSS NO2 Molarband, New Delhi - 110044</div>
+    <img src="logo.png" class="logo" alt="School Logo">
+</div>
 
-<div class="container">
-    <div class="sidebar">
-        <h3>Classes</h3>
-        <button class="class-btn" onclick="showSections('Class 6')">Class 6</button>
-        <button class="class-btn" onclick="showSections('Class 7')">Class 7</button>
-        <button class="class-btn" onclick="showSections('Class 8')">Class 8</button>
-        <button class="class-btn" onclick="showSections('Class 9')">Class 9</button>
-        <button class="class-btn" onclick="showSections('Class 10')">Class 10</button>
-        <button class="class-btn" onclick="showSections('Class 11')">Class 11</button>
-        <button class="class-btn" onclick="showSections('Class 12')">Class 12</button>
-    </div>
-
-    <div class="section-box" id="sectionBox">
-        <h2>Select a Class</h2>
-    </div>
+<div class="btn-box">
+    <button class="login-btn" onclick="location.href='login.html'">LOGIN</button>
 </div>
 
 </body>
