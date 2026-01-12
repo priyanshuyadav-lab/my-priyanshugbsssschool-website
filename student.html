@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Dashboard</title>
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+    body{
+        background:#e9efff;
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .card{
+        width: 420px;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        text-align:center;
+    }
+
+    .photo{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom:15px;
+        object-fit:cover;
+        border: 3px solid #002c8f;
+    }
+
+    h2{
+        color:#002c8f;
+        margin-bottom:15px;
+    }
+
+    .detail-box{
+        text-align:left;
+        font-size:18px;
+        padding: 10px 15px;
+        margin:8px 0;
+        background:#f2f5ff;
+        border-radius:8px;
+        border-left:6px solid #002c8f;
+    }
+
+    button{
+        margin-top:18px;
+        padding:10px 22px;
+        border:none;
+        border-radius:6px;
+        background:#002c8f;
+        color:white;
+        font-size:17px;
+        cursor:pointer;
+        transition:0.2s;
+    }
+    button:hover{
+        background:#001b5c;
+        transform:scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <img class="photo" src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="student photo">
+
+    <h2>Student Profile</h2>
+
+    <div class="detail-box"><b>Name:</b> Priyanshu Kumar</div>
+    <div class="detail-box"><b>Class:</b> 10th B</div>
+    <div class="detail-box"><b>Father Name:</b> Mukesh Kumar</div>
+    <div class="detail-box"><b>DOB:</b> 14 Aug 2010</div>
+    <div class="detail-box"><b>Roll No:</b> 27</div>
+    <div class="detail-box"><b>Address:</b> Molarband, New Delhi</div>
+
+    <button onclick="location.href='index.html'">Logout</button>
+</div>
+
+</body>
+</html>
