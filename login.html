@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | GBSSS NO2</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #eef3ff;
+        margin: 0;
+        padding: 0;
+    }
+    .form-card{
+        width: 350px;
+        background:white;
+        padding: 20px;
+        margin: 40px auto;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid gray;
+        font-size: 16px;
+    }
+    button{
+        background: royalblue;
+        color: white;
+        cursor:pointer;
+    }
+    button:hover{
+        background: navy;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-card">
+<h2>Login</h2>
+
+<label>Select Login Type:</label>
+<select id="userType" onchange="showFields()">
+    <option value="">Select</option>
+    <option value="student">Student</option>
+    <option value="teacher">Teacher</option>
+</select>
+
+<!-- Student -->
+<div id="studentFields" style="display:none;">
+    <input type="text" id="sid" placeholder="Student ID">
+    <input type="date" id="dob">
+</div>
+
+<!-- Teacher -->
+<div id="teacherFields" style="display:none;">
+    <label>Select Teacher:</label>
+    <select id="tname">
+        <option value="">Choose Teacher</option>
+        <option>Rahul Sharma</option>
+        <option>Neha Gupta</option>
+        <option>Amit Singh</option>
+        <option>Priya Yadav</option>
+        <option>Priyanshu Yadav</option>
+    </select>
+    <input type="password" id="tpass" placeholder="Password = 1234">
+</div>
+
+<button onclick="login()">Login</button>
+</div>
+
+<script>
+function showFields() {
+    let type = document.getElementById("userType").value;
+    document.getElementById("studentFields").style.display = type==="student"?"block":"none";
+    document.getElementById("teacherFields").style.display = type==="teacher"?"block":"none";
+}
+
+function login(){
+    let type = document.getElementById("userType").value;
+
+    if(type==="student"){
+        let id = document.getElementById("sid").value;
+        let dob = document.getElementById("dob").value;
+        if(id && dob){
+            location.href="blank.html";
+        }else{
+            alert("Enter Student ID & DOB");
+        }
+    }
+
+    if(type==="teacher"){
+        let name = document.getElementById("tname").value;
+        let pass = document.getElementById("tpass").value;
+
+        if(name==="" || pass===""){
+            alert("Choose teacher and enter password");
+            return;
+        }
+
+        if(pass==="1234"){
+            location.href="blank.html";
+        } else {
+            alert("Wrong password!");
+        }
+    }
+}
+</script>
+
+</body>
+</html>
